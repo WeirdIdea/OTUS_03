@@ -1,0 +1,16 @@
+repos:
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: 'v1.7.1'
+    hooks:
+      - id: mypy
+    hooks:
+      - id: mypy
+      name: mypy
+      entry: "sh mypy_run.sh"
+      language: system
+      # run if any Python file is changed
+      types: [python]
+      # mypy will always check all files
+      pass_filenames: false
+      # use require_serial so that script is only called once per commit
+      require_serial: true
